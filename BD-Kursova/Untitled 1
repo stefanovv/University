@@ -1,0 +1,33 @@
+setLayout(new GridBagLayout());
+		
+		buttonBar.setLayout(new BorderLayout());
+		buttonBar.add(logout, BorderLayout.NORTH);
+		buttonBar.add(post, BorderLayout.SOUTH);
+		
+		JPanel top = new JPanel();
+		top.add(postTweet);
+		top.add(buttonBar);
+		
+		gc = new GridBagConstraints();
+		
+		//FIRST ROW
+		gc.gridy = 0;
+		
+		gc.gridx = 0;
+		gc.weightx = 1;
+		gc.weighty = 1;
+		add(postTweet, gc);
+		
+		
+		gc.gridx = 1;
+		gc.weightx = 1;
+		gc.weighty = 0.5;
+		add(buttonBar, gc);
+		
+		//SECOND ROW
+		gc.gridy++;
+		
+		gc.gridx = 0;
+		gc.weightx = 2;
+		gc.weighty = 1;
+		add(tweetsPanel, gc);
